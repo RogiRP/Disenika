@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--theme-background);
+  --color-surface: var(--theme-surface);
+  --color-foreground: var(--theme-foreground);
+  --color-muted: var(--theme-muted);
+  --color-border: var(--theme-border);
+  --color-input-border: var(--theme-input-border);
+  --color-card-border: var(--theme-card-border);
+  --color-primary: var(--theme-primary);
+  --color-primary-hover: var(--theme-primary-hover);
+  --color-on-primary: var(--theme-on-primary);
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-on-accent: var(--theme-on-accent);
+  --color-link: var(--theme-link);
+  --color-focus: var(--theme-focus);
+  --color-danger: var(--theme-danger);
+  --font-sans: var(--theme-font-body);
+  --font-heading: var(--theme-font-heading);
+  --radius-control: var(--theme-radius-control);
+  --radius-card: var(--theme-radius-card);
+  --radius-button: var(--theme-radius-button);
+  --shadow-card: var(--theme-card-shadow);
+  --spacing-card: var(--theme-card-padding);
+  --spacing-section: var(--theme-section-py);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+}

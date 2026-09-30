@@ -23,6 +23,7 @@ export default defineConfig({
     command: isCI ? "npm run build && npm run start" : "npm run dev",
     url: baseURL,
     reuseExistingServer: !isCI,
+    env: { SHOW_DESIGN_SYSTEM: "true" },
     timeout: 180_000,
   },
 });

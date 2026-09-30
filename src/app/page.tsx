@@ -1,7 +1,10 @@
+import { Container } from "@/components/ui/Container";
+import { Heading } from "@/components/ui/Heading";
+
 export default function HomePage() {
   return (
-    <main className="p-8">
-      <h1 className="text-2xl font-semibold">Plataforma en construcción</h1>
-    </main>
+    <Container as="main" className="py-section">
+      <Heading level={1}>Plataforma en construcción</Heading>
+    </Container>
   );
 }
